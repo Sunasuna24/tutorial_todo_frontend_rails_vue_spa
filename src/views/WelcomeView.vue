@@ -1,5 +1,5 @@
 <template>
-  <h1>This is a post page!</h1>
+  <h1>This is a welcome page!</h1>
   <router-link to="home">Go to HOME</router-link>
 </template>
 
