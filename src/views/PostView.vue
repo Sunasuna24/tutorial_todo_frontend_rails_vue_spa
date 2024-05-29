@@ -1,5 +1,5 @@
 <template>
-  <h1>This is Home Page!</h1>
+  <h1>This is a post page!</h1>
 </template>
 
 <script setup></script>
