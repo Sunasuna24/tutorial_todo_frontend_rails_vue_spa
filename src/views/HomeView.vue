@@ -5,5 +5,27 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      posts: []
+    }
+  },
+  mounted() {
+    this.getAllPosts()
+  },
+  methods: {
+    getAllPosts() {
+      fetch('http://127.0.0.1:3000/posts')
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data)
+          this.posts = data
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+    }
+  }
+}
 </script>
