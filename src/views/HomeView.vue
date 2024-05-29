@@ -1,9 +1,12 @@
 <template>
-  <ul>
-    <li v-for="post in posts" :key="post.id">
-      <router-link to="/">{{ post.title }}</router-link>
-    </li>
-  </ul>
+  <div v-if="posts.lenght < 0">There are no posts yet...</div>
+  <div v-else>
+    <ul>
+      <li v-for="post in posts" :key="post.id">
+        <router-link to="/">{{ post.title }}</router-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
