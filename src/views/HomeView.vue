@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li>Post Title comes here.</li>
+    <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
   </ul>
 </template>
 
