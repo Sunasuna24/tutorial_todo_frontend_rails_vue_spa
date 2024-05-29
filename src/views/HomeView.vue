@@ -1,5 +1,9 @@
 <template>
-  <h1>This is Home Page!</h1>
+  <ul>
+    <li>Post Title comes here.</li>
+  </ul>
 </template>
 
-<script setup></script>
+<script>
+export default {}
+</script>
