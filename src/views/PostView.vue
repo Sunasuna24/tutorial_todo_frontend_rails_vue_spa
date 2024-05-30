@@ -21,7 +21,8 @@ export default {
   data() {
     return {
       title: '',
-      body: ''
+      body: '',
+      post: {}
     }
   },
   methods: {
@@ -47,7 +48,7 @@ export default {
       fetch('http://127.0.0.1:3000/post', options)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data)
+          this.post = data
         })
         .catch((error) => {
           console.error(error)
