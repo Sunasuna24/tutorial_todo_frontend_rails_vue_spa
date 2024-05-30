@@ -2,7 +2,8 @@
   <h1>{{ post.title }}</h1>
   <p>{{ post.body }}</p>
   <button @click="confirmDeletingPost">削除する</button>
-  <router-link to="/home">一覧に戻る</router-link>
+  <router-link :to="{ name: 'post-edit', params: { id: post_id } }">編集する</router-link>
+  <router-link :to="{ name: 'home' }">一覧に戻る</router-link>
 </template>
 
 <script>
