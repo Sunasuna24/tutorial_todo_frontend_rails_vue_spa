@@ -1,5 +1,18 @@
 <template>
   <h1>投稿を編集する</h1>
+  <form>
+    <div>
+      <label for="title">タイトル</label>
+      <input type="text" name="title" id="title" />
+    </div>
+    <div>
+      <label for="body">本文</label>
+      <textarea name="body" id="body"></textarea>
+    </div>
+    <div>
+      <button>編集する</button>
+    </div>
+  </form>
 </template>
 
 <script>
