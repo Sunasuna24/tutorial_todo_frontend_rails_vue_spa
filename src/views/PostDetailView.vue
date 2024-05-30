@@ -1,7 +1,7 @@
 <template>
   <h1>{{ post.title }}</h1>
   <p>{{ post.body }}</p>
-  <button @click="deletePost">削除する</button>
+  <button @click="confirmDeletingPost">削除する</button>
   <router-link to="/home">一覧に戻る</router-link>
 </template>
 
@@ -30,7 +30,15 @@ export default {
         })
     },
     deletePost() {
-      confirm('本当に削除してよろしいですか？')
+      console.log('ここまできたよ')
+    },
+    confirmDeletingPost() {
+      const confirmation = confirm('本当に削除してよろしいですか？')
+      if (confirmation) {
+        this.deletePost()
+      } else {
+        console.log('ユーザーが削除をキャンセルしました')
+      }
     }
   }
 }
