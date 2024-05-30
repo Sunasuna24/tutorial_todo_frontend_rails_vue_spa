@@ -36,9 +36,8 @@ export default {
       const endPoint = 'http://127.0.0.1:3000/posts/' + this.post_id
 
       fetch(endPoint, options)
-        .then((response) => response.json())
         .then(() => {
-          console.log('Post deleted successfully')
+          this.$router.push({ name: 'home' })
         })
         .catch((error) => {
           console.error(error)
