@@ -30,7 +30,19 @@ export default {
         })
     },
     deletePost() {
-      console.log('ここまできたよ')
+      const options = {
+        method: 'DELETE'
+      }
+      const endPoint = 'http://127.0.0.1:3000/posts/' + this.post_id
+
+      fetch(endPoint, options)
+        .then((response) => response.json())
+        .then(() => {
+          console.log('Post deleted successfully')
+        })
+        .catch((error) => {
+          console.error(error)
+        })
     },
     confirmDeletingPost() {
       const confirmation = confirm('本当に削除してよろしいですか？')
