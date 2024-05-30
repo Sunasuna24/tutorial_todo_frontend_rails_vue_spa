@@ -49,6 +49,7 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           this.post = data
+          this.$router.push({ name: 'post-detail', params: { id: this.post.id } })
         })
         .catch((error) => {
           console.error(error)
