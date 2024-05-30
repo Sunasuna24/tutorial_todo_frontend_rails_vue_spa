@@ -13,6 +13,7 @@
       <button>編集する</button>
     </div>
   </form>
+  <router-link :to="{ name: 'post-detail', params: { id: post_id } }">詳細画面に戻る</router-link>
 </template>
 
 <script>
