@@ -1,6 +1,7 @@
 <template>
   <h1>{{ post.title }}</h1>
   <p>{{ post.body }}</p>
+  <button @click="deletePost">削除する</button>
   <router-link to="/home">一覧に戻る</router-link>
 </template>
 
@@ -27,6 +28,9 @@ export default {
         .catch((error) => {
           console.error(error)
         })
+    },
+    deletePost() {
+      confirm('本当に削除してよろしいですか？')
     }
   }
 }
