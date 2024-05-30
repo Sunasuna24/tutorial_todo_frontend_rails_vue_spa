@@ -1,6 +1,6 @@
 <template>
   <h1>This is a post page!</h1>
-  <router-link to="home">Go to HOME</router-link>
+  <router-link :to="{ name: 'home' }">Go to HOME</router-link>
   <form @submit.prevent="submit">
     <div>
       <label for="title">Title</label>
