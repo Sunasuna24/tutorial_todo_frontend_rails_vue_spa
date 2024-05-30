@@ -3,7 +3,7 @@
   <div v-else>
     <ul>
       <li v-for="post in posts" :key="post.id">
-        <router-link to="/">{{ post.title }}</router-link
+        <router-link :to="'/posts/' + post.id">{{ post.title }}</router-link
         >({{ displayJaDate(post.created_at) }})
       </li>
     </ul>
