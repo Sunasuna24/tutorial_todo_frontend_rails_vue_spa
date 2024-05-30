@@ -1,4 +1,6 @@
 <template>
+  <h1>新規投稿</h1>
+  <router-link to="/post">投稿する</router-link>
   <div v-if="posts.lenght < 0">There are no posts yet...</div>
   <div v-else>
     <h1>投稿一覧</h1>
