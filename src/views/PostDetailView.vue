@@ -1,6 +1,7 @@
 <template>
   <h1>{{ post.title }}</h1>
   <p>{{ post.body }}</p>
+  <router-link to="/home">一覧に戻る</router-link>
 </template>
 
 <script>
