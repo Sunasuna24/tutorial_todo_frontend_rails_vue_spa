@@ -1,9 +1,10 @@
 <template>
   <div v-if="posts.lenght < 0">There are no posts yet...</div>
   <div v-else>
+    <h1>投稿一覧</h1>
     <ul>
       <li v-for="post in posts" :key="post.id">
-        <router-link to="/">{{ post.title }}</router-link
+        <router-link :to="'/posts/' + post.id">{{ post.title }}</router-link
         >({{ displayJaDate(post.created_at) }})
       </li>
     </ul>
