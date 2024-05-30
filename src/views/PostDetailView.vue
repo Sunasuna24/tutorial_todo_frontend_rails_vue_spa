@@ -1,6 +1,6 @@
 <template>
-  <h1>This is Post Detail page.</h1>
-  <p>{{ post_id }}</p>
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.body }}</p>
 </template>
 
 <script>
