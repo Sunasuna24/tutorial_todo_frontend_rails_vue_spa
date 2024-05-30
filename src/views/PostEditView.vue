@@ -3,11 +3,11 @@
   <form>
     <div>
       <label for="title">タイトル</label>
-      <input type="text" name="title" id="title" />
+      <input type="text" name="title" id="title" v-model="title" />
     </div>
     <div>
       <label for="body">本文</label>
-      <textarea name="body" id="body"></textarea>
+      <textarea name="body" id="body" v-model="body"></textarea>
     </div>
     <div>
       <button>編集する</button>
@@ -19,6 +19,8 @@
 export default {
   data() {
     return {
+      title: '',
+      body: '',
       post_id: this.$route.params.id,
       post: {}
     }
@@ -34,6 +36,8 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           this.post = data
+          this.title = data.title
+          this.body = data.body
         })
         .catch((error) => {
           console.error(error)
